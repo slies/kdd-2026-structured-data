@@ -1,0 +1,349 @@
+/* =========================
+   GLOBAL
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   NAVBAR (CENTERED BIG LOGO)
+   ========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #2a6df4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2a6df4;
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 580px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.55)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.hero-meta {
+  font-size: 1rem;
+  opacity: 0.9;
+  display: flex;
+  gap: 10px;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+.section {
+  padding: 70px 0;
+}
+
+.section.alt {
+  background: #f7f9fc;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   TOPICS
+   ========================= */
+.clean-list {
+  padding-left: 18px;
+}
+
+/* =========================
+   SPEAKERS (FIXED CAROUSEL)
+   ========================= */
+.speaker-grid {
+  display: flex;
+  flex-wrap: wrap;              /* KEY FIX: no forced horizontal scroll */
+  justify-content: center;
+  gap: 22px;
+
+  padding: 10px 0;
+}
+
+.speaker-card {
+  width: 200px;                 /* fixed stable width */
+  flex: 0 0 auto;
+
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+}
+
+.speaker-card:hover {
+  transform: translateY(-4px);
+}
+
+.speaker-card img {
+  width: 140px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   SCHEDULE
+   ========================= */
+.schedule .row {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.schedule span {
+  width: 140px;
+  font-weight: 600;
+  color: #2a6df4;
+}
+
+/* =========================
+   SLIDES
+   ========================= */
+.slides-box {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.btn {
+  background: #2a6df4;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-outline {
+  border: 2px solid #2a6df4;
+  color: #2a6df4;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* =========================
+   LOGOS
+   ========================= */
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.logo-box img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: white;
+}
+
+/* =========================
+   SCROLL
+   ========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+/* =========================
+   CITE SECTION BACKGROUND
+   ========================= */
+.cite-section {
+  background: #111;        /* dark background for contrast */
+  color: #fff;
+  padding: 70px 0;
+}
+
+.cite-section h2, 
+.cite-section p {
+  color: #fff;
+}
+
+.cite-section .bibtex {
+  background: #0d1117;    /* keeps the code block dark */
+  color: #e6edf3;
+  padding: 18px;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border: 1px solid #30363d;
+  white-space: pre;
+}
+/* =========================
+   BIBTEX DARK BLOCK
+   ========================= */
+
+.bibtex {
+  background: #0d1117;        /* GitHub dark */
+  color: #e6edf3;
+  padding: 18px;
+  border-radius: 12px;
+  overflow-x: auto;
+
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  border: 1px solid #30363d;
+  white-space: pre;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+  }
+
+  /* mobile speaker grid */
+  .speaker-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+  }
+
+  .speaker-card img {
+    width: 120px;
+    height: 160px;
+  }
+
+  .schedule .row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .schedule span {
+    width: auto;
+  }
+}
