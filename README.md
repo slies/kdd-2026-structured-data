@@ -1,1 +1,1 @@
-# kdd-2026-structured-data
+https://slies.github.io/kdd-2026-structured-data/
