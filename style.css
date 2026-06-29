@@ -347,3 +347,11 @@ section {
     width: auto;
   }
 }
+
+.slides-viewer {
+  margin-top: 20px;
+}
+
+.slides-viewer iframe {
+  background: #fff;
+}
